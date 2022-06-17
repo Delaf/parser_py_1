@@ -29,11 +29,11 @@ def collect_data():
             item_price = item.get('price')
             item_desc = item.get('description').strip()
             
-            if '?' in item_desc:
-                item_desc = item_desc.replace('?', 'B')
+            if 'ОІ' in item_desc:
+                item_desc = item_desc.replace('ОІ', 'B')
 
-            if '?' in item_desc:
-                item_desc = item_desc.replace('?', 'Y')
+            if 'Оі' in item_desc:
+                item_desc = item_desc.replace('Оі', 'Y')
                 
             item_wt = item.get('days')
             item_bio = item.get('biomaterial')
@@ -47,12 +47,12 @@ def collect_data():
         
         writer.writerow(
             (
-                'Категория',
-                'Анализ',
-                'Биоматериал',
-                'Описание',
-                'Стоимость',
-                'Готовность дней'
+                'РљР°С‚РµРіРѕСЂРёСЏ',
+                'РђРЅР°Р»РёР·',
+                'Р‘РёРѕРјР°С‚РµСЂРёР°Р»',
+                'РћРїРёСЃР°РЅРёРµ',
+                'РЎС‚РѕРёРјРѕСЃС‚СЊ',
+                'Р“РѕС‚РѕРІРЅРѕСЃС‚СЊ РґРЅРµР№'
             )
         )
         
